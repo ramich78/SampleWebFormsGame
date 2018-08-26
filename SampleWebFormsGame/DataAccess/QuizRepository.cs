@@ -1,5 +1,4 @@
-﻿using System.Data.Entity;
-using System.Linq;
+﻿using System.Linq;
 using SampleWebFormsGame.DataAccess.Interfaces;
 using SampleWebFormsGame.Models;
 
