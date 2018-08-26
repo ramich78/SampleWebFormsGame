@@ -287,6 +287,8 @@
     <Compile Include="BusinessLogic\GameService.cs" />
     <Compile Include="BusinessLogic\Interfaces\IGameService.cs" />
     <Compile Include="BusinessLogic\Interfaces\IQuestionsService.cs" />
+    <Compile Include="BusinessLogic\Interfaces\IResultsService.cs" />
+    <Compile Include="BusinessLogic\ResultsService.cs" />
     <Compile Include="BusinessLogic\QuestionsService.cs" />
     <Compile Include="DataAccess\Interfaces\IQuizRepository.cs" />
     <Compile Include="DataAccess\QuizContext.cs" />

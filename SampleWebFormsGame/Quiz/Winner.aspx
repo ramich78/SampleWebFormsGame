@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Winner.aspx.cs" Inherits="SampleWebFormsGame.Quiz.Winner" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron text-center">
         <h1>You did great!</h1>
-        <h3></h3>
-        <p class="lead">
-            
-        </p>
+        <h3>Your time was: <asp:Label ID="LabelElapsedTime" runat="server"/></h3>
+        <asp:GridView ID="GridViewResults" ItemType="SampleWebFormsGame.Models.GameResult" runat="server"></asp:GridView>
     </div>
 </asp:Content>

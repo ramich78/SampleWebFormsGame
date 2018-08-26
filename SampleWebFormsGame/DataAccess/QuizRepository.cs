@@ -15,5 +15,15 @@ namespace SampleWebFormsGame.DataAccess
             return _db.Questions.AsQueryable();
         }
 
+        public IQueryable<GameResult> GetAllResults()
+        {
+            return _db.GemeResults.AsQueryable();
+        }
+
+        public void InsertResult(GameResult gameResult)
+        {
+            _db.GemeResults.Add(gameResult);
+            _db.SaveChanges();
+        }
     }
 }

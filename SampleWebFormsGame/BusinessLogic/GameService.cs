@@ -64,6 +64,7 @@ namespace SampleWebFormsGame.BusinessLogic
                 currentGameState.EndTime = DateTime.Now;
             }
         }
-   }
+
+    }
 
 }

@@ -23,5 +23,6 @@ namespace SampleWebFormsGame.BusinessLogic.Interfaces
         /// <param name="currentGameState">Current state of the game.</param>
         /// <returns></returns>
         void ValidateAnswer(ref GameState currentGameState);
+
     }
 }
