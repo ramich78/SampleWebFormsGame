@@ -36,7 +36,7 @@ namespace SampleWebFormsGame.BusinessLogic
 
         public IEnumerable<GameResult> GetResults()
         {
-            return _quizRepository.GetAllResults().ToList();
+            return _quizRepository.GetAllResults().OrderBy(result => result.TimeToComplete).ToList();
         }
     }
 }

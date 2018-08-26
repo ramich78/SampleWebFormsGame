@@ -3,6 +3,12 @@
     <div class="jumbotron text-center">
         <h1>You did great!</h1>
         <h3>Your time was: <asp:Label ID="LabelElapsedTime" runat="server"/></h3>
-        <asp:GridView ID="GridViewResults" ItemType="SampleWebFormsGame.Models.GameResult" runat="server"></asp:GridView>
+        <asp:GridView ID="GridViewResults" 
+                      ItemType="SampleWebFormsGame.Models.GameResult" 
+                      AutoGenerateColumns="True" 
+                      SelectMethod="Select"
+                      runat="server">
+
+        </asp:GridView>
     </div>
 </asp:Content>

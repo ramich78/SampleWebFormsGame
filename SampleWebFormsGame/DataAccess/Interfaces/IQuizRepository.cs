@@ -10,11 +10,13 @@ namespace SampleWebFormsGame.DataAccess.Interfaces
         /// </summary>
         /// <returns></returns>
         IQueryable<Question> GetAllQuestions();
+
         /// <summary>
         /// Gets all results from repository.
         /// </summary>
         /// <returns></returns>
         IQueryable<GameResult> GetAllResults();
+        
         /// <summary>
         /// Insert result of the game to repository.
         /// </summary>
