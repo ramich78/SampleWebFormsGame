@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
-using Microsoft.Ajax.Utilities;
 using SampleWebFormsGame.BusinessLogic;
 using SampleWebFormsGame.BusinessLogic.Interfaces;
 using SampleWebFormsGame.DataAccess;
@@ -29,7 +28,7 @@ namespace SampleWebFormsGame.Quiz
             LabelElapsedTime.Text = (_currentGameState.EndTime - _currentGameState.StartTime).ToString(@"mm\:ss");
         }
 
-        public IEnumerable<GameResult> Select()
+        public IEnumerable<GameResult> SelectData()
         {
             return _resultsService.GetResults();
         }
