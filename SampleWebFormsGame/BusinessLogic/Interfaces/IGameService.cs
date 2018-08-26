@@ -8,7 +8,7 @@ namespace SampleWebFormsGame.BusinessLogic.Interfaces
         /// Changes current question to next from the list and sets state of the game accordingly.
         /// <param name="currentGameState">Current state of the game.</param>
         /// </summary>
-        /// <returns>Updated state of the game.</returns>
+        /// <returns></returns>
         void AdvanceToNextQuestion(ref GameState currentGameState);
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace SampleWebFormsGame.BusinessLogic.Interfaces
         /// Checks if the answer given to the question is correct and sets state of the game accordingly.
         /// </summary>
         /// <param name="currentGameState">Current state of the game.</param>
-        /// <returns>Updated state of the game</returns>
+        /// <returns></returns>
         void ValidateAnswer(ref GameState currentGameState);
     }
 }

@@ -9,6 +9,7 @@ namespace SampleWebFormsGame.Quiz
     {
         private readonly IGameService _gameService;
         private GameState _currentGameState;
+        private TimeSpan _elapsedTime;
 
         protected Quiz()
         {
@@ -28,7 +29,8 @@ namespace SampleWebFormsGame.Quiz
                 _currentGameState = (GameState) Session["GameState"];
             }
 
-            RefreshControls();
+            CalculateGameTime();
+            RefreshAllControls();
         }
 
         protected void ButtonLeaveGame_OnClick(object sender, EventArgs e)
@@ -64,12 +66,29 @@ namespace SampleWebFormsGame.Quiz
                     break;
             }
 
-            RefreshControls();
+            RefreshAllControls();
         }
 
-        private void RefreshControls()
+        protected void TimerGameClock_OnTick(object sender, EventArgs e)
+        {
+            CalculateGameTime();
+            RefreshUpdatePanelControls();
+        }
+
+        private void CalculateGameTime()
+        {
+            _elapsedTime = DateTime.Now - _currentGameState.StartTime;
+        }
+
+        private void RefreshAllControls()
         {
             TextBoxQuestionSentence.Text = _currentGameState.CurrentQuestion.QuestionSentence;
+            RefreshUpdatePanelControls();
+        }
+
+        private void RefreshUpdatePanelControls()
+        {
+            LabelGameClock.Text = _elapsedTime.ToString(@"mm\:ss");
         }
     }
 }
