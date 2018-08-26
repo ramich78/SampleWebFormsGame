@@ -14,10 +14,6 @@ namespace SampleWebFormsGame
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            ////Use dependency incjection
-            //var container = this.AddUnity();
-            //container.RegisterType<IQuestionsService, QuestionsService>();
         }
     }
 }
