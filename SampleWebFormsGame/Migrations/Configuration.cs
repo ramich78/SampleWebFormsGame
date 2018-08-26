@@ -4,14 +4,14 @@ namespace SampleWebFormsGame.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SampleWebFormsGame.DataAccess.QuizContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.QuizContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(SampleWebFormsGame.DataAccess.QuizContext context)
+        protected override void Seed(DataAccess.QuizContext context)
         {
             context.Questions.AddOrUpdate(
                 new Question

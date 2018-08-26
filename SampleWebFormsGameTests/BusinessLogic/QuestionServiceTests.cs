@@ -22,7 +22,7 @@ namespace SampleWebFormsGame.Tests.BusinessLogic
         [SetUp]
         public void SetUp()
         {
-            _quizRepository = NSubstitute.Substitute.For<IQuizRepository>();
+            _quizRepository = Substitute.For<IQuizRepository>();
             _service = new QuestionsService(_quizRepository);
             _allDatabaseQuestions = new List<Question>()
             {
