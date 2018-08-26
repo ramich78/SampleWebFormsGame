@@ -2,6 +2,8 @@
 using System.Linq;
 using NUnit.Framework;
 using SampleWebFormsGame.BusinessLogic;
+using SampleWebFormsGame.DataAccess;
+using SampleWebFormsGame.DataAccess.Interfaces;
 
 namespace SampleWebFormsGame.Tests.BusinessLogic
 {
@@ -11,12 +13,14 @@ namespace SampleWebFormsGame.Tests.BusinessLogic
     [TestFixture]
     public class QuestionServiceTests
     {
+        private IQuizRepository _quizRepository;
         private QuestionsService _service;
 
         [SetUp]
         public void SetUp()
         {
-            _service = new QuestionsService();
+            _quizRepository = NSubstitute.Substitute.For<IQuizRepository>();
+            _service = new QuestionsService(_quizRepository);
         }
 
         [TestCase(1)]

@@ -1,6 +1,8 @@
 ﻿using System;
 using SampleWebFormsGame.BusinessLogic;
 using SampleWebFormsGame.BusinessLogic.Interfaces;
+using SampleWebFormsGame.DataAccess;
+using SampleWebFormsGame.DataAccess.Interfaces;
 using SampleWebFormsGame.Models;
 
 namespace SampleWebFormsGame.Quiz
@@ -13,7 +15,8 @@ namespace SampleWebFormsGame.Quiz
 
         protected Quiz()
         {
-            IQuestionsService questionsService = new QuestionsService();
+            IQuizRepository quizRepository = new QuizRepository();
+            IQuestionsService questionsService = new QuestionsService(quizRepository);
             _gameService = new GameService(questionsService);
         }
 

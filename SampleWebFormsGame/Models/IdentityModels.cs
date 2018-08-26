@@ -29,7 +29,7 @@ namespace SampleWebFormsGame.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("name=QuizDatabase", throwIfV1Schema: false)
         {
         }
 

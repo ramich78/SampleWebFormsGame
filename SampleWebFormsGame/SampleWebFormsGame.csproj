@@ -288,6 +288,9 @@
     <Compile Include="BusinessLogic\Interfaces\IGameService.cs" />
     <Compile Include="BusinessLogic\Interfaces\IQuestionsService.cs" />
     <Compile Include="BusinessLogic\QuestionsService.cs" />
+    <Compile Include="DataAccess\Interfaces\IQuizRepository.cs" />
+    <Compile Include="DataAccess\QuizContext.cs" />
+    <Compile Include="DataAccess\QuizRepository.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -298,6 +301,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808261604063_InitialStructure.cs" />
+    <Compile Include="Migrations\201808261604063_InitialStructure.Designer.cs">
+      <DependentUpon>201808261604063_InitialStructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\GameResult.cs" />
     <Compile Include="Models\GameState.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -349,7 +357,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DataAccess\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -361,6 +368,11 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808261604063_InitialStructure.resx">
+      <DependentUpon>201808261604063_InitialStructure.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -4,7 +4,7 @@
 
     <asp:Timer ID="TimerGameClock" runat="server" Interval="1000" OnTick="TimerGameClock_OnTick" />
 
-    <!-- To avoid bootstrap in-line styling custom saas classes should be introduced.-->
+    <!-- To avoid bootstrap/custom in-line styling custom saas classes should be introduced.-->
 
     <div class="jumbotron text-center">
 
@@ -15,7 +15,6 @@
         <div class="row bottom-spacer">
             <asp:Button CssClass="btn btn-primary btn-lg" ID="ButtonYes" runat="server" OnClick="ButtonYes_OnClick" Text="Yes" />
             <asp:Button CssClass="btn btn-primary btn-lg" ID="ButtonNo" OnClick="ButtonNo_OnClick" runat="server" Text="No" />
-
         </div>
 
         <div class="row bottom-spacer">
