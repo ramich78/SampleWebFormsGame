@@ -13,13 +13,22 @@ namespace SampleWebFormsGame.Quiz {
     public partial class Quiz {
         
         /// <summary>
-        /// TextBoxQuestionSentence control.
+        /// TimerGameClock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxQuestionSentence;
+        protected global::System.Web.UI.Timer TimerGameClock;
+        
+        /// <summary>
+        /// LabelQuestionSentence control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelQuestionSentence;
         
         /// <summary>
         /// ButtonYes control.
@@ -40,24 +49,6 @@ namespace SampleWebFormsGame.Quiz {
         protected global::System.Web.UI.WebControls.Button ButtonNo;
         
         /// <summary>
-        /// ButtonLeaveGame control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonLeaveGame;
-        
-        /// <summary>
-        /// TimerGameClock control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.Timer TimerGameClock;
-        
-        /// <summary>
         /// ClockUpdatePanel control.
         /// </summary>
         /// <remarks>
@@ -74,5 +65,14 @@ namespace SampleWebFormsGame.Quiz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelGameClock;
+        
+        /// <summary>
+        /// ButtonLeaveGame control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonLeaveGame;
     }
 }

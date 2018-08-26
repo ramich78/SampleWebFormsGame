@@ -82,7 +82,7 @@ namespace SampleWebFormsGame.Quiz
 
         private void RefreshAllControls()
         {
-            TextBoxQuestionSentence.Text = _currentGameState.CurrentQuestion.QuestionSentence;
+            LabelQuestionSentence.Text = _currentGameState.CurrentQuestion.QuestionSentence;
             RefreshUpdatePanelControls();
         }
 
